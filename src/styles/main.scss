@@ -1,0 +1,49 @@
+// Variables
+$color-background: #000;
+$color-text: #fff;
+$color-accent: #00ffff;
+$color-muted: #888;
+$color-muted-light: #aaa;
+$color-panel-bg: #111;
+$color-button-bg: #333;
+$color-button-hover: #555;
+$color-border: #fff;
+$color-border-muted: #444;
+
+$font-mono: monospace;
+
+// Base styles
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 20px;
+    background-color: $color-background;
+    color: $color-text;
+    font-family: $font-mono;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+// Global button styles
+button {
+    padding: 10px 20px;
+    font-family: $font-mono;
+    font-size: 14px;
+    cursor: pointer;
+    background-color: $color-button-bg;
+    color: $color-text;
+    border: 2px solid $color-border;
+    margin: 0 5px;
+
+    &:hover {
+        background-color: $color-button-hover;
+    }
+}
