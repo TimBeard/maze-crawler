@@ -9,18 +9,18 @@
 
 <script setup lang="ts">
 const { label, modelValue } = defineProps<{
-	label: string;
-	modelValue: string;
-}>();
+    label: string
+    modelValue: string
+}>()
 
 const emit = defineEmits<{
-	"update:modelValue": [value: string];
-	reset: [];
-}>();
+    'update:modelValue': [value: string]
+    reset: []
+}>()
 
 function handleInput(event: Event) {
-	const target = event.target as HTMLInputElement;
-	emit("update:modelValue", target.value);
+    const target = event.target as HTMLInputElement
+    emit('update:modelValue', target.value)
 }
 </script>
 

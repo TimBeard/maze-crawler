@@ -98,70 +98,58 @@
 </template>
 
 <script setup lang="ts">
-import { useGameInstance } from "../composables/useGame";
-import ColorControl from "./ColorControl.vue";
-import SliderControl from "./SliderControl.vue";
+import { useGameInstance } from '../composables/useGame'
+import ColorControl from './ColorControl.vue'
+import SliderControl from './SliderControl.vue'
 
-const game = useGameInstance();
+const game = useGameInstance()
 
 function handleCameraOffsetX(value: number) {
-	game.setCameraOffset(
-		value,
-		game.cameraSettings.value.offsetY,
-		game.cameraSettings.value.offsetZ,
-	);
+    game.setCameraOffset(value, game.cameraSettings.value.offsetY, game.cameraSettings.value.offsetZ)
 }
 
 function handleCameraOffsetY(value: number) {
-	game.setCameraOffset(
-		game.cameraSettings.value.offsetX,
-		value,
-		game.cameraSettings.value.offsetZ,
-	);
+    game.setCameraOffset(game.cameraSettings.value.offsetX, value, game.cameraSettings.value.offsetZ)
 }
 
 function handleCameraOffsetZ(value: number) {
-	game.setCameraOffset(
-		game.cameraSettings.value.offsetX,
-		game.cameraSettings.value.offsetY,
-		value,
-	);
+    game.setCameraOffset(game.cameraSettings.value.offsetX, game.cameraSettings.value.offsetY, value)
 }
 
 function resetOffsetX() {
-	handleCameraOffsetX(0);
+    handleCameraOffsetX(0)
 }
 
 function resetOffsetY() {
-	handleCameraOffsetY(0.5);
+    handleCameraOffsetY(0.5)
 }
 
 function resetOffsetZ() {
-	handleCameraOffsetZ(0);
+    handleCameraOffsetZ(0)
 }
 
 function resetFOV() {
-	game.setCameraFOV(95);
+    game.setCameraFOV(95)
 }
 
 function resetTorchIntensity() {
-	game.setTorchIntensity(5);
+    game.setTorchIntensity(5)
 }
 
 function resetTorchDistance() {
-	game.setTorchDistance(4);
+    game.setTorchDistance(4)
 }
 
 function resetTorchColor() {
-	game.setTorchColor("#ff8647");
+    game.setTorchColor('#ff8647')
 }
 
 function resetAmbientIntensity() {
-	game.setAmbientIntensity(0.25);
+    game.setAmbientIntensity(0.25)
 }
 
 function resetAmbientColor() {
-	game.setAmbientColor("#001e57");
+    game.setAmbientColor('#001e57')
 }
 </script>
 

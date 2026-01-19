@@ -6,8 +6,8 @@
 </template>
 
 <script setup lang="ts">
-import ControlsPanel from "./components/ControlsPanel.vue";
-import GameView from "./components/GameView.vue";
+import ControlsPanel from './components/ControlsPanel.vue'
+import GameView from './components/GameView.vue'
 </script>
 
 <style lang="scss" scoped>

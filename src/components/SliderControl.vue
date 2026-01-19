@@ -15,36 +15,36 @@
 </template>
 
 <script setup lang="ts">
-import { computed } from "vue";
+import { computed } from 'vue'
 
 const props = withDefaults(
-	defineProps<{
-		label: string;
-		modelValue: number;
-		min: number;
-		max: number;
-		step: number;
-		decimals?: number;
-		suffix?: string;
-	}>(),
-	{
-		decimals: 1,
-		suffix: "",
-	},
-);
+    defineProps<{
+        label: string
+        modelValue: number
+        min: number
+        max: number
+        step: number
+        decimals?: number
+        suffix?: string
+    }>(),
+    {
+        decimals: 1,
+        suffix: '',
+    },
+)
 
 const emit = defineEmits<{
-	"update:modelValue": [value: number];
-	reset: [];
-}>();
+    'update:modelValue': [value: number]
+    reset: []
+}>()
 
 const displayValue = computed(() => {
-	return props.modelValue.toFixed(props.decimals) + props.suffix;
-});
+    return props.modelValue.toFixed(props.decimals) + props.suffix
+})
 
 function handleInput(event: Event) {
-	const target = event.target as HTMLInputElement;
-	emit("update:modelValue", parseFloat(target.value));
+    const target = event.target as HTMLInputElement
+    emit('update:modelValue', parseFloat(target.value))
 }
 </script>
 
